@@ -247,7 +247,7 @@ function Node(model, config){
 		ctx.fillStyle = "#000";
 		var width = ctx.measureText(self.label).width;
 		while(width > r*2 - 30){ // -30 for buffer. HACK: HARD-CODED.
-			fontsize = 40;
+			fontsize -= 1;
 			ctx.font = "normal "+fontsize+"px sans-serif";
 			width = ctx.measureText(self.label).width;
 		}
