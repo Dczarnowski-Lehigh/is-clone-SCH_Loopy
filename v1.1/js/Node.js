@@ -240,7 +240,7 @@ function Node(model, config){
 		ctx.fill();
 
 		// Text!
-		var fontsize = 40;
+		var fontsize = 60;
 		ctx.font = "normal "+fontsize+"px sans-serif";
 		ctx.textAlign = "center";
 		ctx.textBaseline = "middle";
