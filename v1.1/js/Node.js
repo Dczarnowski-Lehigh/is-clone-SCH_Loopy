@@ -250,7 +250,7 @@ function Node(model, config){
 			//fontsize -= 1;
 			//ctx.font = "normal "+fontsize+"px sans-serif";
 			//width = ctx.measureText(self.label).width;
-		}
+		// }
 		ctx.fillText(self.label, 0, 0);
 
 		// WOBBLE CONTROLS
