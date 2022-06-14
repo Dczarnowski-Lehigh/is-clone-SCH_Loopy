@@ -240,10 +240,10 @@ function Node(model, config){
 		ctx.fill();
 
 		
-		var fontsize = 60;
+		var fontsize = 40;
 		ctx.font = "normal "+fontsize+"px sans-serif";
 		ctx.textAlign = "center";
-		// ctx.textBaseline = "middle";
+		ctx.textBaseline = "middle";
 		ctx.fillStyle = "#000";
 		console.log(self.label);
 		function wrapText(context, text, x, y, maxWidth, lineHeight) {
@@ -265,7 +265,7 @@ function Node(model, config){
 			}
 			context.fillText(line, x, y);
 		  }
-		  wrapText(ctx, self.label, 0, 0,  r*2- 30, 60)
+		  wrapText(ctx, self.label, 0, 0,  r*2+ 50, 40)
 		// Text!
 		/*
 		var width = ctx.measureText(self.label).width;
