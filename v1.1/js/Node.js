@@ -239,12 +239,35 @@ function Node(model, config){
 		ctx.fillStyle = color;
 		ctx.fill();
 
-		// Text!
-		var fontsize = 100;
+		
+		var fontsize = 60;
 		ctx.font = "normal "+fontsize+"px sans-serif";
 		ctx.textAlign = "center";
-		ctx.textBaseline = "middle";
+		// ctx.textBaseline = "middle";
 		ctx.fillStyle = "#000";
+		console.log(self.label);
+		function wrapText(context, text, x, y, maxWidth, lineHeight) {
+			var words = text.split(' ');
+			var line = '';
+	
+			for(var n = 0; n < words.length; n++) {
+			  var testLine = line + words[n] + ' ';
+			  var metrics = context.measureText(testLine);
+			  var testWidth = metrics.width;
+			  if (testWidth > maxWidth && n > 0) {
+				context.fillText(line, x, y);
+				line = words[n] + ' ';
+				y += lineHeight;
+			  }
+			  else {
+				line = testLine;
+			  }
+			}
+			context.fillText(line, x, y);
+		  }
+		  wrapText(ctx, self.label, 0, 0,  r*2- 30, 60)
+		// Text!
+		/*
 		var width = ctx.measureText(self.label).width;
 		while(width > r*2 - 30){ // -30 for buffer. HACK: HARD-CODED.
 			fontsize -= 1;
@@ -252,6 +275,7 @@ function Node(model, config){
 			width = ctx.measureText(self.label).width;
 		}
 		ctx.fillText(self.label, 0, 0);
+		*/
 
 		// WOBBLE CONTROLS
 		var cl = 40;
