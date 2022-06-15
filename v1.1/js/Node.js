@@ -243,7 +243,7 @@ function Node(model, config){
 		var fontsize = 45;
 		ctx.font = "normal "+fontsize+"px sans-serif";
 		ctx.textAlign = "center";
-		ctx.textBaseline = "middle";
+		ctx.textBaseline = "Middle";
 		ctx.fillStyle = "#000";
 		console.log(self.label);
 		function wrapText(context, text, x, y, maxWidth, lineHeight) {
