@@ -244,7 +244,6 @@ function Node(model, config){
 		ctx.font = "normal "+fontsize+"px sans-serif";
 		ctx.textAlign = "center";
 		ctx.textBaseline = "middle";
-		ctx.fillText("middle", 120, 70);
 		ctx.fillStyle = "#000";
 		console.log(self.label);
 		function wrapText(context, text, x, y, maxWidth, lineHeight) {
