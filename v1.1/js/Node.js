@@ -16,7 +16,7 @@ Node.COLORS = {
 Node.defaultValue = 0.5;
 Node.defaultHue = 0;
 
-Node.DEFAULT_RADIUS = 70;
+Node.DEFAULT_RADIUS = 80;
 
 function Node(model, config){
 
