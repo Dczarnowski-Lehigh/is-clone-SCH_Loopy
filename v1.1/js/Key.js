@@ -23,6 +23,7 @@
 	// Event Handling
 	// TODO: cursors stay when click button? orrrrr switch over to fake-cursor.
 	Key.onKeyDown = function(event){
+		if(ignoreTextareaOrInput(event)) return;
 		if(window.loopy && loopy.modal && loopy.modal.isShowing) return;
 		var code = KEY_CODES[event.keyCode];
 	    Key[code] = true;
@@ -31,11 +32,16 @@
 	    event.preventDefault();
 	}
 	Key.onKeyUp = function(event){
+		if(ignoreTextareaOrInput(event)) return;
 		if(window.loopy && loopy.modal && loopy.modal.isShowing) return;
 		var code = KEY_CODES[event.keyCode];
 	    Key[code] = false;
 	    event.stopPropagation();
 	    event.preventDefault();
+	}
+
+	function ignoreTextareaOrInput(event){
+		return ["TEXTAREA", "INPUT"].indexOf(event.target.nodeName) !== -1
 	}
 	window.addEventListener("keydown",Key.onKeyDown,false);
 	window.addEventListener("keyup",Key.onKeyUp,false);

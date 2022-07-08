@@ -245,7 +245,7 @@ function Node(model, config){
 		ctx.textAlign = "center";
 		ctx.textBaseline = "Middle";
 		ctx.fillStyle = "#000";
-		console.log(self.label);
+		//console.log(self.label);
 		function wrapText(context, text, x, y, maxWidth, lineHeight) {
 			var words = text.split(' ');
 			var line = '';

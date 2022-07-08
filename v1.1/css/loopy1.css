@@ -14,16 +14,16 @@ canvas{
 	width: 100%;
 }
 #canvasses[cursor=ink]{
-	cursor: url('cursors/ink.png') 0 30, auto;
+	cursor: url('https://dczarnowski-lehigh.github.io/is-clone-SCH_Loopy/v1.1/css/icons/ink.png') 0 30, auto;
 }
 #canvasses[cursor=drag]{
-	cursor: url('cursors/drag.png') 15 15, auto;
+	cursor: url('https://dczarnowski-lehigh.github.io/is-clone-SCH_Loopy/v1.1/css/icons/drag.png') 15 15, auto;
 }
 #canvasses[cursor=erase]{
-	cursor: url('cursors/erase.png') 5 25, auto;
+	cursor: url('https://dczarnowski-lehigh.github.io/is-clone-SCH_Loopy/v1.1/css/icons/erase.png') 5 25, auto;
 }
 #canvasses[cursor=label]{
-	cursor: url('cursors/label.png') 15 15, auto;
+	cursor: url('https://dczarnowski-lehigh.github.io/is-clone-SCH_Loopy/v1.1/css/icons/label.png') 15 15, auto;
 }
 
 
