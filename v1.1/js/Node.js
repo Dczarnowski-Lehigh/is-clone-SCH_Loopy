@@ -16,7 +16,7 @@ Node.COLORS = {
 Node.defaultValue = 0.5;
 Node.defaultHue = 0;
 
-Node.DEFAULT_RADIUS = 80;
+Node.DEFAULT_RADIUS = 50;
 
 function Node(model, config){
 
@@ -240,7 +240,7 @@ function Node(model, config){
 		ctx.fill();
 
 		
-		var fontsize = 45;
+		var fontsize = 30;
 		ctx.font = "normal "+fontsize+"px sans-serif";
 		ctx.textAlign = "center";
 		ctx.textBaseline = "Middle";
