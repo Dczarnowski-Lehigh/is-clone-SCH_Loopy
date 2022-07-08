@@ -341,11 +341,11 @@ function ComponentSlider(config){
 	// Slider DOM: graphic + pointer
 	var slider = new Image();
 	slider.draggable = false;
-	slider.src = "css/sliders/"+config.bg+".png";
+	slider.src = "https://dczarnowski-lehigh.github.io/is-clone-SCH_Loopy/v1.1/css/sliders/"+config.bg+".png";
 	slider.setAttribute("class","component_slider_graphic");
 	var pointer = new Image();
 	pointer.draggable = false;
-	pointer.src = "css/sliders/slider_pointer.png";
+	pointer.src = "https://dczarnowski-lehigh.github.io/is-clone-SCH_Loopy/v1.1/css/sliders/slider_pointer.png";
 	pointer.setAttribute("class","component_slider_pointer");
 	sliderDOM.appendChild(slider);
 	sliderDOM.appendChild(pointer);

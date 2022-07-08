@@ -21,7 +21,7 @@ function Toolbar(loopy){
 		// Add the button
 		var button = new ToolbarButton(self,{
 			id: id,
-			icon: "css/icons/"+id+".png",
+			icon: "https://dczarnowski-lehigh.github.io/is-clone-SCH_Loopy/v1.1/css/icons/"+id+".png",
 			tooltip: tooltip,
 			callback: callback
 		});
