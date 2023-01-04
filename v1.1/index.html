@@ -30,28 +30,31 @@
 	<meta property="og:description" content="a tool for thinking in systems">
 
     <!-- Styles! -->
-	<link href="css/loopy.css" rel="stylesheet"/>
+	<link href="css/loopy1.css" rel="stylesheet"/>
 	<link href="css/balloon.css" rel="stylesheet"/>
 
 </head>
 <body style="opacity:0">
+	<div id="canvasContainer">
 
-	<!-- Loopy & Ink -->
-	<div id="canvasses"></div>
-
-	<!-- The Tools' UI -->
-	<div id="toolbar"></div>
-	<div id="playbar"></div>
-	<div id="sidebar"></div>
-
-	<!-- MODAL -->
-	<div id="modal_container">
-		<div id="modal_bg"></div>
-		<div id="modal">
-			<div id="modal_close">[×] CLOSE</div>
-			<div id="modal_page"></div>
+		<!-- Loopy & Ink -->
+		<div id="canvasses"></div>
+	
+		<!-- The Tools' UI -->
+		<div id="toolbar"></div>
+		<div id="playbar"></div>
+		<div id="sidebar"></div>
+	
+		<!-- MODAL -->
+		<div id="modal_container">
+			<div id="modal_bg"></div>
+			<div id="modal">
+				<div id="modal_close">[×] CLOSE</div>
+				<div id="modal_page"></div>
+			</div>
 		</div>
 	</div>
+
 
 </body>
 </html>
@@ -83,7 +86,32 @@
 
 <!-- Start it -->
 <script>
-window.onload = function(){
-	window.loopy = new Loopy();
-};
+
+    function initLoopy(){
+		try {
+			const parentElement = parent.document.getElementById('canvasContainer').parentElement;
+			const wrapperComputedStyle = window.getComputedStyle(parentElement, null)
+			let wrapperWidth = parentElement.clientWidth
+			wrapperWidth -=
+			parseFloat(wrapperComputedStyle.marginLeft) +
+			parseFloat(wrapperComputedStyle.marginRight) +
+			parseFloat(wrapperComputedStyle.paddingLeft) +
+			parseFloat(wrapperComputedStyle.paddingRight);
+			document.documentElement.style.setProperty('--vw-scale', wrapperWidth / 1366);
+			window.loopy = new Loopy();
+		} catch (error) {
+			window.loopy = new Loopy();
+		}
+    }
+    if (document.readyState !== 'loading') 
+    {
+        console.warn('document is already ready, just execute code here');
+        initLoopy();
+    }else{
+        document.addEventListener("DOMContentLoaded", function() {
+            console.warn('document was not ready, place code here');
+            initLoopy();
+        });
+
+    }
 </script>
