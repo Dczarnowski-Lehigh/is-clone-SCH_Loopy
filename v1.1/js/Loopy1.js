@@ -168,7 +168,6 @@ function Loopy(config){
 	});
 
 	self.saveToURL = function(embed){
-
 		// Create link
 		var dataString = self.model.serialize();
 		var uri = dataString; // encodeURIComponent(dataString);
@@ -185,7 +184,7 @@ function Loopy(config){
 		self.dirty = false;
 
 		// PUSH TO HISTORY
-		window.history.replaceState(null, null, historyLink);
+		// window.history.replaceState(null, null, historyLink);
 
 		return link;
 	};
